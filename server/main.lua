@@ -1,6 +1,6 @@
 ESX = exports['es_extended']:getSharedObject()
 
-ESX.RegisterServerCallback('alen_revive:getConnectedEMS', function ()
+ESX.RegisterServerCallback('alen_revive:getConnectedEMS', function (source, cb)
     local xplayers = ESX.GetPlayers()
     local amount = 0
 
