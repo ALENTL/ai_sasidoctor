@@ -5,7 +5,7 @@ ESX.RegisterServerCallback('alen_revive:getConnectedEMS', function (source, cb)
     local amount = 0
 
     for i = 1, #xplayers, 1 do
-        local xplayer = ESX.GetPlayerFromID(xplayers[i])
+        local xplayer = ESX.GetPlayerFromId(xplayers[i])
         if xplayer.job.name == 'ambulance' then
             amount = amount + 1
         end
@@ -29,7 +29,7 @@ end)
 
 RegisterServerEvent('alen_revive:feeAfterRevive')
 AddEventHandler('alen_revive:feeAfterRevive', function ()
-    local xPlayer = ESX.GetPlayerFromID(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
     xPlayer.removeAccountMoney('bank', Config.Fee)
 
     if Config.okokNotify == 'true' then
